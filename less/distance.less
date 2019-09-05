@@ -1,0 +1,69 @@
+// length
+// 基数
+@base_line: 5px;
+
+@gap-sm: @base_line;
+@gap: @base_line * 2;
+@gap-md: @base_line * 3;
+@gap-lg: @base_line * 4;
+
+// margin & padding
+.m(@num) {
+    margin: @num * 1px;
+}
+
+.m-t(@num) {
+    margin-top: @num * 1px;
+}
+
+.m-b(@num) {
+    margin-bottom: @num * 1px;
+}
+
+.m-r(@num) {
+    margin-right: @num * 1px;
+}
+
+.m-l(@num) {
+    margin-left: @num * 1px;
+}
+
+.m-v(@num) {
+    .m-t(@num);
+    .m-b(@num);
+}
+
+.m-h(@num) {
+    .m-l(@num);
+    .m-r(@num);
+}
+
+.p(@num) {
+    padding: @num * 1px;
+}
+
+.p-t(@num) {
+    padding-top: @num * 1px;
+}
+
+.p-b(@num) {
+    padding-bottom: @num * 1px;
+}
+
+.p-r(@num) {
+    padding-right: @num * 1px;
+}
+
+.p-l(@num) {
+    padding-left: @num * 1px;
+}
+
+.p-v(@num) {
+    .p-t(@num);
+    .p-b(@num);
+}
+
+.p-h(@num) {
+    .p-l(@num);
+    .p-r(@num);
+}

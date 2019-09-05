@@ -1,0 +1,55 @@
+// font
+// 字体定义
+@font-family: -apple-system,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+// 字号
+@font-size-mini: 10px;
+@font-size-sm:   12px;
+@font-size:      14px;
+@font-size-md:   16px;
+@font-size-lg:   18px;
+
+// 字体粗细
+@font-weight:       400;
+@font-weight-bold:  bold;
+
+// text-align
+.t-l() {
+    text-align: left;
+}
+
+.t-r() {
+    text-align: right;
+}
+
+.t-c() {
+    text-align: center;
+}
+
+// 字体相应的方法
+.font-size(@size) {
+    font-size: @size * 1px;
+    line-height: @size + 8px;
+}
+.font-size-mini() {
+    font-size: @font-size-mini;
+    line-height: @font-size-mini + 8px;
+}
+.font-size-sm() {
+    font-size: @font-size-sm;
+    line-height: @font-size-sm + 8px;
+}
+.font-size() {
+    font-size: @font-size;
+    line-height: @font-size + 8px;
+}
+.font-size-md() {
+    font-size: @font-size-md;
+    line-height: @font-size-md + 8px;
+}
+.font-size-lg() {
+    font-size: @font-size-lg;
+    line-height: @font-size-lg + 8px;
+}
+.font-weight(@weight) {
+    font-weight: @weight;
+}

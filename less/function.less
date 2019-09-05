@@ -1,0 +1,118 @@
+// 文字省略号
+.text-overflow () {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 文字省略号，包含行数
+.text-overflow-line (@num) {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @num;
+    overflow: hidden;
+}
+
+// 清除浮动
+.clearfix () {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
+// border
+
+.border-line() {
+    position: relative;
+    &::after {
+        height: 1px;
+        background-color: @border-color;
+        position: absolute;
+        bottom: 0;
+        left: @gap-md;
+        right: @gap-md;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+.border-line(@color, @left, @right) {
+    position: relative;
+    &::after {
+        height: 1px;
+        background-color: @color;
+        position: absolute;
+        bottom: 0;
+        left: @left;
+        right: @right;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+.border-line-top() {
+    position: relative;
+    &::after {
+        height: 1px;
+        background-color: @border-color;
+        position: absolute;
+        top: 0;
+        left: @gap-md;
+        right: @gap-md;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+.border-line-top(@color, @left, @right) {
+    position: relative;
+    &::after {
+        height: 1px;
+        background-color: @color;
+        position: absolute;
+        top: 0;
+        left: @left;
+        right: @right;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+// 滚动相关
+.scroll-x() {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: block;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+.scroll-y() {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+}
+
+// 背景渐变
+.linear-right-top(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right top, @colorOne, @colorTwo);
+}
+.linear-bottom(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to bottom, @colorOne, @colorTwo);
+}
+.linear-right-bottom(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right bottom, @colorOne, @colorTwo);
+}
+.linear-right(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right, @colorOne, @colorTwo);
+}
+.linear-background-color(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right , @colorOne, @colorTwo);
+}
